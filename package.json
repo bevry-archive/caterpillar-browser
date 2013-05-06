@@ -1,0 +1,51 @@
+{
+	"name": "caterpillar-browser",
+	"version": "2.0.0",
+	"description": "Use Caterpillar within Web Browsers! (even includes support for colors!)",
+	"homepage": "https://github.com/bevry/caterpillar-browser",
+	"keywords": [
+		"caterpillar", "caterpillar-transform",
+		"console", "log", "logger", "logging", "debug",
+		"stream", "transform",
+		"browser", "console.log"
+	],
+	"author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+	"maintainers": [
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+	],
+	"contributors": [
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+	],
+	"bugs": {
+		"url": "https://github.com/bevry/caterpillar-browser/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/bevry/caterpillar-browser.git"
+	},
+	"engines": {
+		"node": ">=0.8"
+	},
+	"dependencies": {},
+	"peerDependencies": {
+		"caterpillar": "2.x",
+		"caterpillar-human": "2.x"
+	},
+	"devDependencies": {
+		"readable-stream": "~1.0.2",
+		"caterpillar": "2.x",
+		"caterpillar-filter": "2.x",
+		"caterpillar-human": "2.x",
+		"coffee-script": "~1.6.2",
+		"joe": "~1.2.0",
+		"joe-reporter-console": "~1.2.1",
+		"chai": "~1.6.0"
+	},
+	"directories": {
+		"lib": "./out/lib"
+	},
+	"scripts": {
+		"test": "node ./out/test/caterpillar-browser-test.js"
+	},
+	"main": "./out/lib/caterpillar-browser.js"
+}
