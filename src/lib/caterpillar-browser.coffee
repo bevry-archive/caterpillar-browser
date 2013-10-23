@@ -85,4 +85,5 @@ class Browser extends require('caterpillar').Transform
 # Export
 module.exports = {
 	Browser
+	createBrowser: (args...) ->  new Browser(args...)
 }

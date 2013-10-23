@@ -2,16 +2,16 @@
 // logger.js
 
 // Logger
-var logger = new (require('caterpillar').Logger)({level:7});
+var logger = require('caterpillar').createLogger({level:7});
 var output = logger
 	.pipe(
-		new (require('caterpillar-filter').Filter)()
+		require('caterpillar-filter').createFilter()
 	)
 	.pipe(
-		new (require('caterpillar-human').Human)()
+		require('caterpillar-human').createHuman()
 	)
 	.pipe(
-		new (require('./').Browser)()
+		require('./').createBrowser()
 	);
 
 // Export

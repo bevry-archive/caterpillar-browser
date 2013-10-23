@@ -1,24 +1,42 @@
+
+<!-- TITLE/ -->
+
 # Browser Transform for [Caterpillar](https://github.com/bevry/caterpillar)
 
-[![Build Status](https://secure.travis-ci.org/bevry/caterpillar-browser.png?branch=master)](http://travis-ci.org/bevry/caterpillar-browser)
-[![NPM version](https://badge.fury.io/js/caterpillar-browser.png)](https://npmjs.org/package/caterpillar-browser)
-[![Flattr this project](https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif)](http://flattr.com/thing/344188/balupton-on-Flattr)
+<!-- /TITLE -->
+
+
+<!-- BADGES/ -->
+
+[![Build Status](http://img.shields.io/travis-ci/bevry/caterpillar-browser.png?branch=master)](http://travis-ci.org/bevry/caterpillar-browser "Check this project's build status on TravisCI")
+[![NPM version](https://badge.fury.io/js/caterpillar-browser.png)](https://npmjs.org/package/caterpillar-browser "View this project on NPM")
+[![Gittip donate button](http://img.shields.io/gittip/bevry.png)](https://www.gittip.com/bevry/ "Donate weekly to this project using Gittip")
+[![Flattr donate button](https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
+[![PayPayl donate button](https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
+
+<!-- /BADGES -->
+
+
+<!-- DESCRIPTION/ -->
 
 Use [Caterpillar](https://github.com/bevry/caterpillar) within Web Browsers! (even includes support for colors!)
 
+<!-- /DESCRIPTION -->
 
+
+<!-- INSTALL/ -->
 
 ## Install
 
-### Backend
+### [Node](http://nodejs.org/), [Browserify](http://browserify.org/)
+- Use: `require('caterpillar-browser')`
+- Install: `npm install --save caterpillar-browser`
 
-1. [Install Node.js](http://bevry.me/node/install)
-2. `npm install --save caterpillar-browser`
+### [Ender](http://ender.jit.su/)
+- Use: `require('caterpillar-browser')`
+- Install: `ender add caterpillar-browser`
 
-### Frontend
-
-1. [See Browserify](http://browserify.org/)
-
+<!-- /INSTALL -->
 
 
 ## Usage
@@ -30,16 +48,16 @@ Use [Caterpillar](https://github.com/bevry/caterpillar) within Web Browsers! (ev
 // logger.js
 
 // Logger
-var logger = new (require('caterpillar').Logger)({level:7});
+var logger = require('caterpillar').createLogger({level:7});
 var output = logger
 	.pipe(
-		new (require('caterpillar-filter').Filter)()
+		require('caterpillar-filter').createFilter()
 	)
 	.pipe(
-		new (require('caterpillar-human').Human)()
+		require('caterpillar-human').createHuman()
 	)
 	.pipe(
-		new (require('caterpillar-browser').Browser)()
+		require('caterpillar-browser').createBrowser()
 	);
 
 // Export
@@ -128,12 +146,51 @@ new (require('caterpillar-browser').Browser)(config)
 	- `config(config)` emitted once our configuration has updated
 
 
+<!-- HISTORY/ -->
 
 ## History
-You can discover the history inside the [History.md](https://github.com/bevry/caterpillar-browser/blob/master/History.md#files) file
+[Discover the change history by heading on over to the `History.md` file.](https://github.com/bevry/caterpillar-browser/blob/master/History.md#files)
+
+<!-- /HISTORY -->
 
 
+<!-- BACKERS/ -->
+
+## Backers
+
+### Maintainers
+
+These amazing people are maintaining this project:
+
+- Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)
+
+### Sponsors
+
+No sponsors yet! Will you be the first?
+
+[![Gittip donate button](http://img.shields.io/gittip/bevry.png)](https://www.gittip.com/bevry/ "Donate weekly to this project using Gittip")
+[![Flattr donate button](https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
+[![PayPayl donate button](https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
+
+### Contributors
+
+These amazing people have contributed code to this project:
+
+- Benjamin Lupton <b@lupton.cc> (https://github.com/balupton) - [view contributions](https://github.com/bevry/caterpillar-browser/commits?author=balupton)
+
+[Become a contributor!](https://github.com/bevry/caterpillar-browser/blob/master/Contributing.md#files)
+
+<!-- /BACKERS -->
+
+
+<!-- LICENSE/ -->
 
 ## License
-Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
-<br/>Copyright &copy; 2013+ [Bevry Pty Ltd](http://bevry.me)
+
+Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://creativecommons.org/licenses/MIT/)
+
+Copyright &copy; 2013+ Bevry Pty Ltd <us@bevry.me> (http://bevry.me)
+
+<!-- /LICENSE -->
+
+
