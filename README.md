@@ -63,7 +63,7 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 
 ## Usage
 
-[Example.](https://github.com/bevry/caterpillar-examples/master/docs/all.js)
+[Example.](https://github.com/bevry/caterpillar-examples/master/all.js)
 
 [Run the example in your web browser.](http://rawgit.com/bevry/caterpillar-examples/master/index.html)
 
