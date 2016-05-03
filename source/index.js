@@ -1,89 +1,115 @@
-# Browser
-class Browser extends require('caterpillar').Transform
-	config:
-		color: true
-		write: true
-		styles:
-			red:
-				start: 31
-				end: 39
-				value: 'color:red'
-			yellow:
-				start: 33
-				end: 39
-				value: 'color:orange'
-			green:
-				start: 32
-				end: 39
-				value: 'color:green'
-			bright:
-				start: 1
-				end: 22
-				value: 'font-weight:bold'
-			dim:
-				start: 2
-				end: 22
-				value: 'color:lightGray'
-			italic:
-				start: 3
-				end: 23
-				value: 'font-style:italic'
-			underline:
-				start: 4
-				end: 24
-				value: 'text-decoration:underline'
+// Imports
+const {Transform} = require('caterpillar')
 
-	_transform: (chunk, encoding, next) =>
-		# Check
-		entry = chunk.toString()
-		if entry[0] is '{'
-			err = new Error("Input to the browser transform was not human readable")
+/**
+Convert human readable Caterpillar entries into browser compatible entries
+Extends http://rawgit.com/bevry/caterpillar/master/docs/index.html#Transform
+@extends caterpillar.Transform
+@example
+const logger = require('caterpillar').create()
+logger.pipe(require('caterpillar-human').create()).pipe(require('caterpillar-browser').create())
+logger.log('info', 'some', {data: 'oh yeah'}, 42)
+*/
+class Browser extends Transform {
 
-		# Format
-		else
-			try
-				args = @format(entry)
-				console.log.apply(console, args)  if @getConfig().write is true
-				message = JSON.stringify(args)
-			catch _err
-				err = err
+	/**
+	Get the initial configuration.
+	@returns {Object}
+	*/
+	getInitialConfig () {
+		return {
+			color: true,
+			write: true,
+			styles: {
+				red: {
+					start: 31,
+					end: 39,
+					value: 'color:red'
+				},
+				yellow: {
+					start: 33,
+					end: 39,
+					value: 'color:orange'
+				},
+				green: {
+					start: 32,
+					end: 39,
+					value: 'color:green'
+				},
+				bright: {
+					start: 1,
+					end: 22,
+					value: 'font-weight:bold'
+				},
+				dim: {
+					start: 2,
+					end: 22,
+					value: 'color:lightGray'
+				},
+				italic: {
+					start: 3,
+					end: 23,
+					value: 'font-style:italic'
+				},
+				underline: {
+					start: 4,
+					end: 24,
+					value: 'text-decoration:underline'
+				}
+			}
+		}
+	}
 
-		# Forward
-		return next(err, message)
+	/**
+	Convert a human readable Caterpillar entry into a format that browser consoles can understand.
+	And if the `write` config property is `true` (it is by default), write the result to the browser console.
+	@param {string} message
+	@returns {string}
+	*/
+	format (message /* :string */ ) {
+		// Prepare
+		const {color, styles, write} = this.getConfig()
 
-	format: (entry) =>
-		# Prepare
-		config = @getConfig()
+		// Replace caterpillar-human formatted entry
+		const args = []
+		const result = message.replace(/\u001b\[([0-9]+)m(.+?)\u001b\[([0-9]+)m/g, function (match, start, content, end) {
+			// Check
+			if ( color === false )  return content
 
-		# Replace human formatted entry
-		args = []
-		result = entry.replace /\u001b\[([0-9]+)m(.+?)\u001b\[([0-9]+)m/g, (match,start,message,end) ->
-			# Check
-			return message  if config.color is false
+			// Prepare
+			let matchedStyle, style
 
-			# Prepare
-			matchedStyle = null
+			// Find the matcing style for this combination
+			for ( const key in styles ) {
+				if ( styles.hasOwnProperty(key) ) {
+					style = styles[key]
+					if ( String(style.start) === String(start) && String(style.end) === String(end) ) {
+						matchedStyle = style
+						break
+					}
+				}
+			}
 
-			# Find the matcing style for this combination
-			for key,style of config.styles
-				if String(style.start) is String(start) and String(style.end) is String(end)
-					matchedStyle = style
-					break
+			// Check
+			if ( !matchedStyle )  return content
 
-			# Check
-			return message  unless matchedStyle
-
-			# Push the style
+			// Push the style
 			args.push(style.value)
-			args.push(message)
+			args.push(content)
 			args.push('color:default; font:default; text-decoration:default')
 			return '%c%s%c'
+		})
 
-		# Return
-		return [result.trim()].concat(args)
+		// Final format
+		const parts = [result.trim()].concat(args)
 
-# Export
-module.exports = {
-	Browser
-	createBrowser: (args...) ->  new Browser(args...)
+		// Write
+		if ( write )  console.log(...parts)
+
+		// Return
+		return parts
+	}
 }
+
+// Export
+module.exports = Browser

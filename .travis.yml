@@ -1,13 +1,33 @@
+# 2016 April 27
+# https://github.com/bevry/base
+
+# Use the latest travis infrastructure
+sudo: false
+
+# We use node
 language: node_js
-install: "npm install"
-before_script: "./node_modules/.bin/cake test-prepare"
-script: "npm test"
 node_js:
-  - "0.8"
-  - "0.10"
+  #- "0.12"
+  #- "4"
+  # ^ disabled while flow is busted: https://github.com/facebook/flow/issues/1721#issuecomment-216077420
+  - "5"
+  - "6"
+cache:
+  directories:
+    - node_modules
+
+# Prepare our tests
+# Ensure the project is setup correctly and compiled
+install: "npm run-script setup"
+before_script: "npm run-script compile"
+
+# Run our tests
+script: "npm test"
+
+# Custom notifications
 notifications:
-  irc:
-    - "irc.freenode.org#bevry-dev"
+  slack:
+    secure: Shml5eauyd/XF1McngrmwyNcOM4mHYRqSlx3+vdXJwpGnCf4s7eVtsOCKDqUOY0tGRh3R0NAz+EmM5eqo8Tj/2xvpeWBe+8gKDg1VX1TjmhOWLWjwRTliZjG8tDRsB/kspBZkAVRSHerVdIZS54s/TTYvmfyAzgvC75Mg4obyWQ=
   email:
     recipients:
-      - travisci@bevry.me
+      secure: Eo1bP6PgiJQcSJPK4cpt5H2eiGN8qPwjgAF97Ifj6YylhtBNPoJ40r858e0XRu2jXE7QDQZaZcN7JEWKyiH8Pl5vMuRMX2XzMYnYb0FQi+RaF9Rc8zXWDHztQNI/MEQcQ7c4gcGySJkz7Ajb5DVSbv/TqWzA+NYby6kPYDc6SMY=
