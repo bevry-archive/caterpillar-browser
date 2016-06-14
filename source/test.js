@@ -4,7 +4,7 @@ const {suite} = require('joe')
 const {Logger} = require('caterpillar')
 const Browser = require('../')
 const Human = require('caterpillar-human')
-const {PassThrough} = require('readable-stream')
+const {PassThrough} = require('stream')
 
 // Prepare
 function cleanChanging (item) {
