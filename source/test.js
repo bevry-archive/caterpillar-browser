@@ -4,7 +4,7 @@
 const { equal } = require('assert-helpers')
 const { suite } = require('kava')
 const { Logger } = require('caterpillar')
-const Browser = require('../')
+const Browser = require('./')
 const Human = require('caterpillar-human')
 const { PassThrough } = require('stream')
 
