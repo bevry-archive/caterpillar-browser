@@ -18,4 +18,4 @@ after_success:
 notifications:
   email:
     recipients:
-      secure: h7x4bon8MImRG9VGLrdUtKhmthosfjoNncuSjHNGFbGoeDw3rbmSU2G09XjN7e22yuKABQztBF9ApxRiuKCr3sgeDcs/liurhBIRlFpopEE/TPdjNhqnWeTX5StSM3bqswt8dpdNSWm4kuLXFjk4vCYHHyHOwj9Klj/wzAjqHcc=
+      secure: LcTYogjfJ8uw6qj3zLh3N5OnHp6Q56A4IOMnK7ChdEJbH8J2rHUEaEfrOG2nB5du1Nw+svvQ6JZbb+IV+6bMhim/g3Mv7R1ZPw3+qrBqsnrSblu+Swh6n7Jsh5RZBeJfDFzA/J5U7c8AM5ZX+auGlBZ5/VlNo273npHBIk0sNsk=
