@@ -26,39 +26,39 @@ class Browser extends Transform {
 				red: {
 					start: 31,
 					end: 39,
-					value: 'color:red'
+					value: 'color:red',
 				},
 				yellow: {
 					start: 33,
 					end: 39,
-					value: 'color:orange'
+					value: 'color:orange',
 				},
 				green: {
 					start: 32,
 					end: 39,
-					value: 'color:green'
+					value: 'color:green',
 				},
 				bright: {
 					start: 1,
 					end: 22,
-					value: 'font-weight:bold'
+					value: 'font-weight:bold',
 				},
 				dim: {
 					start: 2,
 					end: 22,
-					value: 'color:lightGray'
+					value: 'color:lightGray',
 				},
 				italic: {
 					start: 3,
 					end: 23,
-					value: 'font-style:italic'
+					value: 'font-style:italic',
 				},
 				underline: {
 					start: 4,
 					end: 24,
-					value: 'text-decoration:underline'
-				}
-			}
+					value: 'text-decoration:underline',
+				},
+			},
 		}
 	}
 
@@ -77,7 +77,7 @@ class Browser extends Transform {
 		/* eslint no-control-regex:0 */
 		const result = message.replace(
 			/\u001b\[([0-9]+)m(.+?)\u001b\[([0-9]+)m/g,
-			function(match, start, content, end) {
+			function (match, start, content, end) {
 				// Check
 				if (color === false) return content
 

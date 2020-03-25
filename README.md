@@ -33,6 +33,14 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 <!-- /DESCRIPTION -->
 
 
+## Usage
+
+[Complete API Documentation.](http://master.caterpillar-browser.bevry.surge.sh/docs/)
+
+[Example.](https://github.com/bevry/caterpillar-examples/blob/master/all.js)
+
+[Run the example in your web browser.](http://rawgit.com/bevry/caterpillar-examples/master/index.html)
+
 <!-- INSTALL/ -->
 
 <h2>Install</h2>
@@ -40,14 +48,15 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
 <ul>
 <li>Install: <code>npm install --save caterpillar-browser</code></li>
-<li>Require: <code>require('caterpillar-browser')</code></li>
+<li>Import: <code>import * as pkg from ('caterpillar-browser')</code></li>
+<li>Require: <code>const pkg = require('caterpillar-browser')</code></li>
 </ul>
 
 <a href="https://jspm.io" title="Native ES Modules CDN"><h3>jspm</h3></a>
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/caterpillar-browser'
+    import * as pkg from '//dev.jspm.io/caterpillar-browser@5.0.0'
 </script>
 ```
 
@@ -56,8 +65,8 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 <p>This package is published with the following editions:</p>
 
 <ul><li><code>caterpillar-browser</code> aliases <code>caterpillar-browser/source/index.js</code></li>
-<li><code>caterpillar-browser/source/index.js</code> is esnext source code with require for modules</li>
-<li><code>caterpillar-browser/edition-browsers/index.js</code> is esnext compiled for browsers with require for modules</li></ul>
+<li><code>caterpillar-browser/source/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> source code for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
+<li><code>caterpillar-browser/edition-browsers/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> compiled for web browsers with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
 
 <h3><a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a></h3>
 
@@ -73,14 +82,6 @@ This project provides its type information via inline <a href="http://usejsdoc.o
 
 <!-- /INSTALL -->
 
-
-## Usage
-
-[API Documentation.](http://master.caterpillar-browser.bevry.surge.sh/docs/)
-
-[Example.](https://github.com/bevry/caterpillar-examples/blob/master/all.js)
-
-[Run the example in your web browser.](http://rawgit.com/bevry/caterpillar-examples/master/index.html)
 
 <!-- HISTORY/ -->
 
