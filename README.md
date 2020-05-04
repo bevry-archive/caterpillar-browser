@@ -56,7 +56,7 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/caterpillar-browser@5.0.0'
+    import * as pkg from '//dev.jspm.io/caterpillar-browser@5.1.0'
 </script>
 ```
 
