@@ -1,7 +1,7 @@
 {
   "title": "Browser Transform for [Caterpillar](https://github.com/bevry/caterpillar)",
   "name": "caterpillar-browser",
-  "version": "5.1.0",
+  "version": "6.0.0",
   "description": "Use Caterpillar within Web Browsers! (even includes support for colors!)",
   "homepage": "https://github.com/bevry/caterpillar-browser",
   "license": "MIT",
