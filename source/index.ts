@@ -1,23 +1,22 @@
-// @ts-check
-/* eslint class-methods-use-this:0 */
-'use strict'
-
 // Imports
-const { Transform } = require('caterpillar')
+import { Transform, LogEntry } from 'caterpillar'
 
 /**
-Convert human readable Caterpillar entries into browser compatible entries
-@extends Transform
-@example
-const logger = require('caterpillar').create()
-logger.pipe(require('caterpillar-human').create()).pipe(require('caterpillar-browser').create())
-logger.log('info', 'some', {data: 'oh yeah'}, 42)
-*/
+ * Convert human readable Caterpillar entries into browser compatible entries
+ * @example
+ * ``` javascript
+ * import Logger from 'caterpillar'
+ * import Human from 'caterpillar-human'
+ * import Browser from 'caterpillar-browser'
+ * const logger = new Logger()
+ * const human = new Human()
+ * const browser = new Browser()
+ * logger.pipe(human).pipe(browser)
+ * logger.log('info', 'some', {data: 'oh yeah'}, 42)
+ * ```
+ */
 class Browser extends Transform {
-	/**
-	Get the initial configuration.
-	@returns {Object}
-	*/
+	/** Get the initial configuration */
 	getInitialConfig() {
 		return {
 			color: true,
@@ -63,18 +62,16 @@ class Browser extends Transform {
 	}
 
 	/**
-	Convert a human readable Caterpillar entry into a format that browser consoles can understand.
-	And if the `write` config property is `true` (it is by default), write the result to the browser console.
-	@param {string} message
-	@returns {string[]}
-	*/
-	format(message) {
+	 * Convert a human readable Caterpillar entry into a format that browser consoles can understand.
+	 * And if the `write` config property is `true` (it is by default), write the result to the browser console.
+	 */
+	format(message: string): string[] {
 		// Prepare
 		const { color, styles, write } = this.getConfig()
 
 		// Replace caterpillar-human formatted entry
-		const args = []
 		/* eslint no-control-regex:0 */
+		const args: string[] = []
 		const result = message.replace(
 			/\u001b\[([0-9]+)m(.+?)\u001b\[([0-9]+)m/g,
 			function (match, start, content, end) {
@@ -113,6 +110,7 @@ class Browser extends Transform {
 		const parts = [result.trim()].concat(args)
 
 		// Write
+		/* eslint no-console:0 */
 		if (write) console.log(...parts)
 
 		// Return
@@ -120,5 +118,6 @@ class Browser extends Transform {
 	}
 }
 
-// Export
-module.exports = Browser
+// Aliases
+export const create = Browser.create.bind(Browser)
+export default Browser

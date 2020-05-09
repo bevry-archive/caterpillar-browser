@@ -1,15 +1,13 @@
-'use strict'
-
 // Import
-const { equal } = require('assert-helpers')
-const { suite } = require('kava')
-const { Logger } = require('caterpillar')
-const Browser = require('./')
-const Human = require('caterpillar-human')
-const { PassThrough } = require('stream')
+import { equal } from 'assert-helpers'
+import { suite } from 'kava'
+import { Logger } from 'caterpillar'
+import Human from 'caterpillar-human'
+import { PassThrough } from 'stream'
+import Browser from './index.js'
 
 // Prepare
-function cleanChanging(item) {
+function cleanChanging(item: string): string {
 	item = item
 		.replace(/\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3}\]/, 'date')
 		.replace(/\[[/\\].+?:\d{1,}\]/, 'file')
@@ -39,13 +37,18 @@ suite('human', function (suite) {
 		})
 	})
 
-	function addSuite(name, config, expected, cleaner) {
+	function addSuite(
+		name: string,
+		config: { color?: boolean; level?: number },
+		expected: string[],
+		cleaner?: typeof cleanChanging
+	) {
 		suite(name, function (suite, test) {
 			const logger = new Logger(config)
 			const human = new Human()
 			const browser = new Browser()
 			const output = new PassThrough()
-			let actual = []
+			let actual: string[] = []
 			if (cleaner) expected = expected.map(cleaner)
 
 			output.on('data', function (chunk) {
