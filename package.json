@@ -1,5 +1,5 @@
 {
-  "title": "Browser Transform for [Caterpillar](https://github.com/bevry/caterpillar)",
+  "title": "Browser Transform for Caterpillar",
   "name": "caterpillar-browser",
   "version": "6.0.0",
   "description": "Use Caterpillar within Web Browsers! (even includes support for colors!)",
