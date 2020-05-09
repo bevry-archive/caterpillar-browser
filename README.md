@@ -37,7 +37,7 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 
 [Complete API Documentation.](http://master.caterpillar-browser.bevry.surge.sh/docs/globals.html)
 
-[Example.](https://github.com/bevry/caterpillar-examples/blob/master/all.js)
+[Example.](https://github.com/bevry/caterpillar-examples/blob/master/source/all.ts)
 
 [Run the example in your web browser.](http://rawgit.com/bevry/caterpillar-examples/master/index.html)
 
