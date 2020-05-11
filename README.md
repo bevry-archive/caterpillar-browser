@@ -1,6 +1,6 @@
 <!-- TITLE/ -->
 
-<h1>Browser Transform for [Caterpillar](https://github.com/bevry/caterpillar)</h1>
+<h1>Browser Transform for Caterpillar</h1>
 
 <!-- /TITLE -->
 
@@ -56,7 +56,7 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 
 ``` html
 <script type="module">
-    import pkg from '//cdn.pika.dev/caterpillar-browser/^6.0.0'
+    import pkg from '//cdn.pika.dev/caterpillar-browser/^6.1.0'
 </script>
 ```
 
@@ -64,7 +64,7 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 
 ``` html
 <script type="module">
-    import pkg from '//unpkg.com/caterpillar-browser@^6.0.0'
+    import pkg from '//unpkg.com/caterpillar-browser@^6.1.0'
 </script>
 ```
 
@@ -72,7 +72,7 @@ Use Caterpillar within Web Browsers! (even includes support for colors!)
 
 ``` html
 <script type="module">
-    import pkg from '//dev.jspm.io/caterpillar-browser@6.0.0'
+    import pkg from '//dev.jspm.io/caterpillar-browser@6.1.0'
 </script>
 ```
 
