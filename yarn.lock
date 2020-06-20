@@ -425,40 +425,15 @@ caterpillar-human@^6.4.0, caterpillar-human@^6.6.0:
     valid-directory "^2.4.0"
     valid-module "^1.5.0"
 
-caterpillar@5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/caterpillar/-/caterpillar-5.6.0.tgz#0b3ecc35561f377177e5b92549d1a91f72f859da"
-  integrity sha512-RDkYRAOxzYb1zveAC+KeUAcy9NTSN7hObZj+tKlSQbVGNOIt06cdyPd5hS1RJr+t9qvgit364ZHpkZgxUa8n4Q==
+caterpillar@5.9.0, caterpillar@^5.4.0, caterpillar@^5.6.0, caterpillar@^5.8.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/caterpillar/-/caterpillar-5.9.0.tgz#117339ae8c0dbf72181463718b0295177db4f0f3"
+  integrity sha512-FhXmyaurXQmDuqTaPj+F3+NwiItVO3t6Qfk7Rtt/3A/nwI7qeSekNsPcnmBwbUlvge5uFFeDklI+AdM4qOBZqw==
   dependencies:
-    extendr "^5.5.0"
-    get-current-line "^5.5.0"
-    rfc-log-levels "^3.5.0"
-
-caterpillar@^5.4.0, caterpillar@^5.6.0, caterpillar@^5.8.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/caterpillar/-/caterpillar-5.8.0.tgz#405a2b45ceb1068957f42db57f982a7a954d6223"
-  integrity sha512-/GUJ2DCIKUtcPBZ6nYzZV+GAEOVqFl/lL2Xd113P8zew8ezkpge02oGSp4DuM45IM0WJD0Zlq9N5bS3uI7aa1w==
-  dependencies:
-    "@bevry/update-contributors" "^1.10.0"
-    "@typescript-eslint/eslint-plugin" "^3.3.0"
-    "@typescript-eslint/parser" "^3.3.0"
-    assert-helpers "^6.10.0"
-    eslint "^7.3.0"
-    eslint-config-bevry "^3.9.0"
-    eslint-config-prettier "^6.11.0"
-    eslint-plugin-prettier "^3.1.4"
-    extendr "^5.6.0"
-    get-current-line "^5.6.0"
-    kava "^5.5.0"
-    make-deno-edition "^0.6.1"
-    prettier "^2.0.5"
-    projectz "^2.7.0"
-    rfc-log-levels "^3.6.0"
-    surge "^0.21.3"
-    typedoc "^0.17.7"
-    typescript "^3.9.5"
-    valid-directory "^2.4.0"
-    valid-module "^1.5.0"
+    editions "3.5.0"
+    extendr "5.5.0"
+    get-current-line "5.5.0"
+    rfc-log-levels "3.5.0"
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -801,17 +776,10 @@ eslint-config-bevry@^3.10.0, eslint-config-bevry@^3.9.0:
   dependencies:
     semver "^7.3.2"
 
-eslint-config-prettier@^6.11.0:
+eslint-config-prettier@^6.11.0, eslint-config-prettier@^6.7.0:
   version "6.11.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.11.0.tgz#f6d2238c1290d01c859a8b5c1f7d352a0b0da8b1"
   integrity sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==
-  dependencies:
-    get-stdin "^6.0.0"
-
-eslint-config-prettier@^6.7.0:
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.7.0.tgz#9a876952e12df2b284adbd3440994bf1f39dfbb9"
-  integrity sha512-FamQVKM3jjUVwhG4hEMnbtsq7xOIDm+SY5iBPfR8gKsJoAB2IQnNF+bk1+8Fy44Nq7PPJaLvkRxILYdJWoguKQ==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -952,7 +920,14 @@ extend@~3.0.2:
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
-extendr@^5.5.0, extendr@^5.6.0, extendr@^5.7.0:
+extendr@5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/extendr/-/extendr-5.5.0.tgz#973e4d7c2a1f0fd76ec1156e282cf7c6d967f6dc"
+  integrity sha512-X+8DHBXYIwMi87BM+SXE0+7znw6OTgVN75lc/aIZzg7O1gbubARJ/u9okpHiL89A7xDb+SGxGW6Kk09Jq65FOw==
+  dependencies:
+    typechecker "^7.4.0"
+
+extendr@^5.7.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/extendr/-/extendr-5.7.0.tgz#9cfb96586809bbde402eb9ce3f9385473d37b715"
   integrity sha512-Q9h/VklMw3eg2MdVz1gNSxHbXqxbEoq9wiln/cI0ybfdoUU0FHzRClEEKeIIzPTb/RjbOA6SmlBuus/3+gGLsQ==
@@ -1141,28 +1116,10 @@ get-cli-arg@^5.3.0, get-cli-arg@^5.5.0:
     typescript "^3.9.5"
     valid-directory "^2.4.0"
 
-get-current-line@^5.5.0, get-current-line@^5.6.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/get-current-line/-/get-current-line-5.7.0.tgz#5621af85e0a9a3a8a238744222d924b17879c87c"
-  integrity sha512-ZJThc6RlaBfIPp0L/557HXnfZ/nzItPZq5Vlt0L+kTD5l02pKioXyqUAWuEaIAPK3r2cLviKT5QdSj830Gmlhw==
-  dependencies:
-    "@bevry/update-contributors" "^1.10.0"
-    "@typescript-eslint/eslint-plugin" "^3.3.0"
-    "@typescript-eslint/parser" "^3.3.0"
-    assert-helpers "^6.10.0"
-    eslint "^7.3.0"
-    eslint-config-bevry "^3.10.0"
-    eslint-config-prettier "^6.11.0"
-    eslint-plugin-prettier "^3.1.4"
-    kava "^5.5.0"
-    make-deno-edition "^0.7.0"
-    prettier "^2.0.5"
-    projectz "^2.7.0"
-    surge "^0.21.3"
-    typedoc "^0.17.7"
-    typescript "^3.9.5"
-    valid-directory "^2.4.0"
-    valid-module "^1.5.0"
+get-current-line@5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/get-current-line/-/get-current-line-5.5.0.tgz#4db3a73152262488387c1bce69c46c5380de8cac"
+  integrity sha512-STCaXFXNC8bqwLCAnvV98v2jXQW4pzZxeB44BVAparggfI+kkZ8rwKJaU+TBg7PpK6ZEo3srcv2mZ8/8p6/psA==
 
 get-stdin@^6.0.0:
   version "6.0.0"
@@ -2122,28 +2079,10 @@ revalidator@0.1.x:
   resolved "https://registry.yarnpkg.com/revalidator/-/revalidator-0.1.8.tgz#fece61bfa0c1b52a206bd6b18198184bdd523a3b"
   integrity sha1-/s5hv6DBtSoga9axgZgYS91SOjs=
 
-rfc-log-levels@^3.5.0, rfc-log-levels@^3.6.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/rfc-log-levels/-/rfc-log-levels-3.7.0.tgz#a2e8d4dec975752c840111f3f150699160365779"
-  integrity sha512-bzxuckEPdIz+PMOFX5jm23xXlzouf6ihCieBAmugVK3bGlgh8S2UqgSyGxHz/q8OI6mAQjj/2/b3aGMEJNhP2w==
-  dependencies:
-    "@bevry/update-contributors" "^1.10.0"
-    "@typescript-eslint/eslint-plugin" "^3.3.0"
-    "@typescript-eslint/parser" "^3.3.0"
-    assert-helpers "^6.10.0"
-    eslint "^7.3.0"
-    eslint-config-bevry "^3.10.0"
-    eslint-config-prettier "^6.11.0"
-    eslint-plugin-prettier "^3.1.4"
-    kava "^5.6.0"
-    make-deno-edition "^0.9.0"
-    prettier "^2.0.5"
-    projectz "^2.7.0"
-    surge "^0.21.3"
-    typedoc "^0.17.7"
-    typescript "^3.9.5"
-    valid-directory "^2.4.0"
-    valid-module "^1.6.0"
+rfc-log-levels@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/rfc-log-levels/-/rfc-log-levels-3.5.0.tgz#3d7f46a02bfe813fb9b4e5321ccce794a93743b5"
+  integrity sha512-OpikvAEizZMkOhwnJY8XDgRZar3DRj/2zo8bPeG0tF7umyBq55GNRSmKEBnquQvh4ZLHAN/PwGTKGQ4QkDgDNg==
 
 rimraf@2, rimraf@2.x.x:
   version "2.7.1"
