@@ -341,14 +341,14 @@ caterpillar-human@6.10.0, caterpillar-human@^6.10.0:
     ansicolors "~0.3.2"
     ansistyles "~0.1.3"
 
-caterpillar@5.10.0, caterpillar@^5.10.0:
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/caterpillar/-/caterpillar-5.10.0.tgz#56ffa77128d422014d158292ff5d73d20024b96c"
-  integrity sha512-77zmaAh9gp2giYYaHP8upvlZPBxKbIjOlh4yO7s22F/VtKzpS7prP34oZPFJGsok/SV8pqw5HZZydZU5UPqbow==
+caterpillar@5.11.0, caterpillar@^5.10.0:
+  version "5.11.0"
+  resolved "https://registry.yarnpkg.com/caterpillar/-/caterpillar-5.11.0.tgz#b7286019aafa285df5682b987135f353e0943170"
+  integrity sha512-rtInTA5fqSe5Lj5YXaFtQvdwS1cmCqOKcmx1ey4jjzkDaMXJG2ptae+RXAJ6dCKMGleCz3QrenxoLgJL+56E/Q==
   dependencies:
-    extendr "5.5.0"
-    get-current-line "5.5.0"
-    rfc-log-levels "3.5.0"
+    extendr "5.9.0"
+    get-current-line "5.9.0"
+    rfc-log-levels "3.9.0"
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -802,14 +802,7 @@ extend@~3.0.2:
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
-extendr@5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/extendr/-/extendr-5.5.0.tgz#973e4d7c2a1f0fd76ec1156e282cf7c6d967f6dc"
-  integrity sha512-X+8DHBXYIwMi87BM+SXE0+7znw6OTgVN75lc/aIZzg7O1gbubARJ/u9okpHiL89A7xDb+SGxGW6Kk09Jq65FOw==
-  dependencies:
-    typechecker "^7.4.0"
-
-extendr@^5.5.0, extendr@^5.7.0:
+extendr@5.9.0, extendr@^5.5.0, extendr@^5.7.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/extendr/-/extendr-5.9.0.tgz#8cfebe4870bc0197e990d5d1416375534dbdc673"
   integrity sha512-eDmfkqSRXPrTguRZpDHYptEphgl67qlq3FOO+zWmI1q8CqOeJulYdTVIp9pNGZ6KQfTo4Mm61H2B0fB66Ej1hQ==
@@ -975,10 +968,10 @@ get-cli-arg@^6.0.0:
   dependencies:
     normalify "2.15.0"
 
-get-current-line@5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/get-current-line/-/get-current-line-5.5.0.tgz#4db3a73152262488387c1bce69c46c5380de8cac"
-  integrity sha512-STCaXFXNC8bqwLCAnvV98v2jXQW4pzZxeB44BVAparggfI+kkZ8rwKJaU+TBg7PpK6ZEo3srcv2mZ8/8p6/psA==
+get-current-line@5.9.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/get-current-line/-/get-current-line-5.9.0.tgz#8fa63dd7dc0804d8080630f4ef5e74c13f669d8e"
+  integrity sha512-tzrk1f5k4Zw+YkKZ4EqvtA7XWziDMll4EAytL9EEXkkKJaD7iXaJJzXpRLfitmgDVq8b5hM14rpZwHcUfuK5HQ==
 
 get-stdin@^6.0.0:
   version "6.0.0"
@@ -1791,10 +1784,10 @@ revalidator@0.1.x:
   resolved "https://registry.yarnpkg.com/revalidator/-/revalidator-0.1.8.tgz#fece61bfa0c1b52a206bd6b18198184bdd523a3b"
   integrity sha1-/s5hv6DBtSoga9axgZgYS91SOjs=
 
-rfc-log-levels@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/rfc-log-levels/-/rfc-log-levels-3.5.0.tgz#3d7f46a02bfe813fb9b4e5321ccce794a93743b5"
-  integrity sha512-OpikvAEizZMkOhwnJY8XDgRZar3DRj/2zo8bPeG0tF7umyBq55GNRSmKEBnquQvh4ZLHAN/PwGTKGQ4QkDgDNg==
+rfc-log-levels@3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/rfc-log-levels/-/rfc-log-levels-3.9.0.tgz#fff6cc6a2d04f9b123d66422aedbbf2a0afb2fca"
+  integrity sha512-i3/EH7fqO1grTLBq6j1jGWrYgGEk+GMmVopyY/j4KYWBZxxq66TeOOE3Rr2T9oc+lwT9q93FnRK/y0Uec4BIWw==
 
 rimraf@2, rimraf@2.x.x:
   version "2.7.1"
@@ -2193,11 +2186,6 @@ typechecker@^6.2.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/typechecker/-/typechecker-6.4.0.tgz#c087dc744c5a0f17524d58a17eb31a9660ab7324"
   integrity sha512-EbOu+9szY13mhl0EsvLXnR+pTCa3gTHQQPLdce72ujcC9fRHXlVFBNXtHeRhgzLxLlKUh4zA9C0tezLDgshf+A==
-
-typechecker@^7.4.0:
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/typechecker/-/typechecker-7.10.0.tgz#774e3dca5b4d328bcf843e382f794ad9a5b6fce4"
-  integrity sha512-e7yzPyPe1FGiyt8YwvxsZcR5/BI/RjRkfSQ9S0ilCBYFPED7qQ09dN0mpq6MlM67Vo+zRbfXc6ghYNYwBpQoaw==
 
 typedoc-default-themes@^0.10.1:
   version "0.10.1"
