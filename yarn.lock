@@ -333,10 +333,10 @@ caterpillar-filter@^6.10.0:
   resolved "https://registry.yarnpkg.com/caterpillar-filter/-/caterpillar-filter-6.10.0.tgz#772ce2c11f9f9f9f457788e4da1ca65f9c9ccb43"
   integrity sha512-8yPshDFBK/LBk0ewf75TX1KbdQVpVy4gTMJLpAAvkY69A01zuqklbIrIckJFai/1naFRuGgtqelLTvYFOHwHSA==
 
-caterpillar-human@6.10.0, caterpillar-human@^6.10.0:
-  version "6.10.0"
-  resolved "https://registry.yarnpkg.com/caterpillar-human/-/caterpillar-human-6.10.0.tgz#79fd75dee1733703629b831cf700308854643eb2"
-  integrity sha512-q8aPRQeysK85xmikOo2vinfg1B4IDSNS9yLqeImiLjdPxZu0k1YYCIH8WlV8aftT07lI67x5+VLVtTMwdmaR6g==
+caterpillar-human@6.11.0, caterpillar-human@^6.10.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/caterpillar-human/-/caterpillar-human-6.11.0.tgz#087517edcda6c2ddd7f8b11fe0058d1bef5a548c"
+  integrity sha512-sX5tCv6jwKlUgPzdxr6dnaeCJ66UM6Xv6qvUKqUPC57VnozTe25QoEOTmaB+O9gTd6i0NUocVVQFvPmShz06Gw==
   dependencies:
     ansicolors "~0.3.2"
     ansistyles "~0.1.3"
